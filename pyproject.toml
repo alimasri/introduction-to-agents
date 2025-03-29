@@ -1,0 +1,35 @@
+[project]
+name = "introduction-to-agents"
+version = "0.1.0"
+requires-python = "~=3.12"
+
+dependencies = [
+  "python-dotenv>=1.0.1", # Used in all files for environment variables
+  "pydantic>=2.10.6",     # Used for data validation and settings
+  # LLM and Agent Framework Dependencies
+  "langchain>=0.3.20",
+  "langchain-core>=0.3.45",
+  "langchain-experimental>=0.3.4",
+  "langchain-openai>=0.3.8",
+  "langgraph>=0.3.11",
+  "langgraph-supervisor>=0.0.9",
+  "smolagents>=1.11.0",
+  # Data Processing and Storage
+  "duckdb>=1.2.1",   # Used in sales.py for SQL queries
+  "pandas>=2.2.3",   # Used in sales_data_generator.py and sales.py
+  "pyarrow>=19.0.1", # Required for parquet file support
+  "numpy>=2.2.4",    # Used in sales_data_generator.py
+  "faker>=37.0.0",   # Used in sales_data_generator.py
+  # Vector Store and Embeddings
+  "faiss-cpu>=1.10.0",            # Used in minirag.py for vector storage
+  "sentence-transformers>=4.1.0", # Required by langchain-huggingface
+  "langchain-community>=0.3.19",
+  "langchain-huggingface>=0.1.2",
+  # Tracing and Monitoring
+  "arize-phoenix-otel>=0.9.2",
+  "openinference-instrumentation>=0.1.27",
+  "openinference-instrumentation-langchain>=0.1.41",
+  # Development and Notebook Support
+  "ipykernel>=6.29.5", # For Jupyter notebook support
+  "grandalf>=0.8",     # For graph visualization in notebooks
+]
